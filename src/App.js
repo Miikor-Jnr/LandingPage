@@ -1,7 +1,6 @@
 import './App.css';
 import { FrontSection, NavBar, Options, SuccessStories, Talents } from './components';
 import { Options2 } from './components/Options2';
-import Zoom from 'react-reveal/Zoom';
 
 function App() {
   return (
@@ -20,9 +19,7 @@ function App() {
       <SuccessStories />
       <Talents />
       <div className='px-[80px] py-[143.5px] bg-mine grid place-items-center'>
-       <Zoom>
        <h3 className='font-semibold text-[40px] text-[#EFF4F580] text-center mb-[64px]'>One Platform.  <span className='text-white'>Everything you need</span></h3>
-       </Zoom>
 <div className='grid grid-cols-4 gap-[16px] w-full'>
   <div>
   <div className='px-[80px] h-[220px] bg-[#00212D]' style={{borderRadius:'4px 4px 0 0'}}></div>

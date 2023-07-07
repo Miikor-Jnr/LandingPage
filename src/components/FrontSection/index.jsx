@@ -1,5 +1,4 @@
 import React from "react";
-import Reveal from 'react-reveal/Reveal';
 
 
 
@@ -8,7 +7,6 @@ export function FrontSection(){
         <div className="pt-[71px] relative">
                 <img src="/images/strand1.svg" alt="strand" />
             <div className="flex justify-between items-center px-[89px] mb-[59px]">
-            <Reveal left>
             <div className="py-[12px] px-[10px] bg-white rounded-[7.2px] mr-[27.14px] w-fit">
                 <div className="flex items-start gap-x-[8px]">
                 <img src="/images/badge.svg" alt="payment" />
@@ -28,7 +26,6 @@ export function FrontSection(){
                 <button className="w-full py-[6px] text-[6px] text-white rounded-[9px] bg-[#285E6A]">Apply</button>
             </div>
             </div>
-            </Reveal>
             <img src="/images/craft.svg" alt="craft" />
             </div>
             <div>

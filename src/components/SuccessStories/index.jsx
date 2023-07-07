@@ -1,14 +1,12 @@
 import React from "react";
-import Zoom from 'react-reveal/Zoom';
 
 export function SuccessStories() {
     return (
         <div>
             <div className="text-center">
                 <p className="text-[32px] font-semibold text-[#ECE2DC]">Success Stories</p>
-<Zoom>
 <h3 className="text-[40px] font-semibold text-white mt-[18px]">Hear how Synergy is changing lives</h3>
-</Zoom>
+
             </div>
             <div className="w-[85%] mx-auto relative mt-[104px]">
                 <img src="/images/arrow-left.svg" alt="arrow" className="absolute top-[50%] cursor-pointer"  style={{transform:'translateY(-50%)'}}/>
