@@ -1,0 +1,5 @@
+export * from "./NavBar"
+export * from "./FrontSection"
+export * from "./Options"
+export * from "./SuccessStories"
+export * from "./Talents"
