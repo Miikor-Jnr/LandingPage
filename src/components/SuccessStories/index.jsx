@@ -1,11 +1,43 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
+import "animate.css"
+import "intersection-observer"
 
 export function SuccessStories() {
+
+    const [inView, setInView] = useState(false)
+    const targetRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Do something when the target element is in the viewport
+           setInView(true)
+            // Perform your desired action here
+          }
+        });
+      });
+  
+      if (targetRef.current) {
+        observer.observe(targetRef.current);
+      }
+  
+      // Cleanup the observer
+      return () => {
+        if (targetRef.current) {
+          observer.unobserve(targetRef.current);
+        }
+      };
+    }, []);
+
+
+
+
     return (
         <div>
             <div className="text-center">
                 <p className="text-[32px] font-semibold text-[#ECE2DC]">Success Stories</p>
-<h3 className="text-[40px] font-semibold text-white mt-[18px]">Hear how Synergy is changing lives</h3>
+<h3 className={inView ? "animate__animated animate__zoomIn animate__fast text-[40px] font-semibold text-white mt-[18px]": "text-[40px] font-semibold text-white mt-[18px]"} ref={targetRef}>Hear how Synergy is changing lives</h3>
 
             </div>
             <div className="w-[85%] mx-auto relative mt-[104px]">

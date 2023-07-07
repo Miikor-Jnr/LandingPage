@@ -1,4 +1,5 @@
 import React from "react";
+import 'animate.css';
 
 
 
@@ -7,7 +8,7 @@ export function FrontSection(){
         <div className="pt-[71px] relative">
                 <img src="/images/strand1.svg" alt="strand" />
             <div className="flex justify-between items-center px-[89px] mb-[59px]">
-            <div className="py-[12px] px-[10px] bg-white rounded-[7.2px] mr-[27.14px] w-fit">
+            <div className="animate__animated animate__backInLeft animate__slow	2s py-[12px] px-[10px] bg-white rounded-[7.2px] mr-[27.14px] w-fit">
                 <div className="flex items-start gap-x-[8px]">
                 <img src="/images/badge.svg" alt="payment" />
                <div>

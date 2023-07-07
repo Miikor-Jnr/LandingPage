@@ -23,7 +23,7 @@ Say goodbye to the challenges of finding the best talent and unlock the potentia
 </div>
 </div>
             </div>
-            <div className="bg-[#02435599]" style={{zIndex:100}}>
+            <div className="bg-[#02435599]" style={{zIndex:0}}>
                 <img src="/images/talent.svg" alt="talent" style={{transform:'translateX(24px) translateY(24px)'}}/>
             </div>
         </div>

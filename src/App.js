@@ -1,8 +1,39 @@
 import './App.css';
 import { FrontSection, NavBar, Options, SuccessStories, Talents } from './components';
 import { Options2 } from './components/Options2';
+import "animate.css"
+import "intersection-observer"
+import { useEffect, useState, useRef } from 'react';
 
 function App() {
+
+  const [inView, setInView] = useState(false)
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Do something when the target element is in the viewport
+         setInView(true)
+          // Perform your desired action here
+        }
+      });
+    });
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    // Cleanup the observer
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, []);
+
+
   return (
     <div className='bg-mine'>
       <NavBar />
@@ -19,7 +50,7 @@ function App() {
       <SuccessStories />
       <Talents />
       <div className='px-[80px] py-[143.5px] bg-mine grid place-items-center'>
-       <h3 className='font-semibold text-[40px] text-[#EFF4F580] text-center mb-[64px]'>One Platform.  <span className='text-white'>Everything you need</span></h3>
+       <h3 className={inView ? 'animate__animated animate__zoomIn animate__fast font-semibold text-[40px] text-[#EFF4F580] text-center mb-[64px]': 'font-semibold text-[40px] text-[#EFF4F580] text-center mb-[64px]'} ref={targetRef}>One Platform.  <span className='text-white'>Everything you need</span></h3>
 <div className='grid grid-cols-4 gap-[16px] w-full'>
   <div>
   <div className='px-[80px] h-[220px] bg-[#00212D]' style={{borderRadius:'4px 4px 0 0'}}></div>
